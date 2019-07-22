@@ -12,6 +12,10 @@
   padding: 70px 0 70px 0;
 }
 
+.InfoGroup.testimonials {
+  background: rgba(248, 249, 250, 1);
+}
+
 .InfoGroup h2 {
   margin: 0 0 45px;
 }

@@ -12,7 +12,7 @@ export const Info = (prop) => {
 
 export const InfoGroup = (prop) => {
     return (
-        <div className="InfoGroup container-fluid">
+        <div className={`InfoGroup container-fluid ${prop.className}`}>
             { 
                 prop.title && <h2>{prop.title}</h2>
             }

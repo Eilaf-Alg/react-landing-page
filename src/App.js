@@ -10,6 +10,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
+
       <NavBar />
       <Jumbotron img="img/bg-masthead.jpg"/>
       <InfoGroup>
@@ -48,7 +49,7 @@ const App = () => {
         caption="Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!"
       />
       
-      <InfoGroup title="What people are saying...">
+      <InfoGroup className="testimonials" title="What people are saying...">
         <Avatar 
           img="img/testimonials-1.jpg"
           title="Margaret E."
