@@ -12,6 +12,10 @@
   padding: 70px 0 70px 0;
 }
 
+.InfoGroup h2 {
+  margin: 0 0 45px;
+}
+
 .InfoGroup .container{
   display: inline-flex;
   justify-content: space-between;
@@ -30,11 +34,6 @@
   padding: 70px;
 }
 
-.AvatarGroup {
-  display: flex;
-  justify-content: space-between;
-}
-
 .Avatar img {
   border-radius: 100%;
   box-shadow: #000 0px 0px 10px;
@@ -44,4 +43,10 @@
 
 .Avatar p {
   max-width: 192px;
+}
+
+.Avatar p.title {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 16px 0 8px;
 }

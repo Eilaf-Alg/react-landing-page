@@ -48,26 +48,26 @@ const App = () => {
         caption="Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!"
       />
       
-      <InfoGroup>
+      <InfoGroup title="What people are saying...">
         <Avatar 
           img="img/testimonials-1.jpg"
           title="Margaret E."
           caption={"This is fantastic! Thanks so much guys!"}
         />
         <Avatar 
-        img="img/testimonials-2.jpg"
-        title="Fred S."
-        caption={"Bootstrap is amazing. I\'ve been using it to create lots of super nice landing pages."}
-      />
-      <Avatar 
-        img="img/testimonials-3.jpg"
-        title="Sarah W."
-        caption={"Thanks so much for making these free resources available to us!"}
-      />
+          img="img/testimonials-2.jpg"
+          title="Fred S."
+          caption={"Bootstrap is amazing. I\'ve been using it to create lots of super nice landing pages."}
+        />
+        <Avatar 
+          img="img/testimonials-3.jpg"
+          title="Sarah W."
+          caption={"Thanks so much for making these free resources available to us!"}
+        />
       </InfoGroup>
 
       <Jumbotron img="img/bg-masthead.jpg"/>
-      
+
     </div>
   );
 }

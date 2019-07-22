@@ -13,6 +13,9 @@ export const Info = (prop) => {
 export const InfoGroup = (prop) => {
     return (
         <div className="InfoGroup container-fluid">
+            { 
+                prop.title && <h2>{prop.title}</h2>
+            }
             <div className="container">
                 {prop.children}
             </div>
