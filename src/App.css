@@ -29,3 +29,19 @@
 .JigSaw .showcase-text {
   padding: 70px;
 }
+
+.AvatarGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Avatar img {
+  border-radius: 100%;
+  box-shadow: #000 0px 0px 10px;
+  width: 192px;
+  height: 192px;
+}
+
+.Avatar p {
+  max-width: 192px;
+}
