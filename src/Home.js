@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Jumbotron from './Jumbotron';
 import NavBar from './NavBar';
 import JigSaw from './JigSaw';
+import SignUpWindow from './SignUpWindow'
 import { InfoGroup, Info } from './InfoGroup'
 import { Avatar } from './AvatarGroup'  
 
 const Home = () => {
+
+  const [state, setState] = useState({ signUpForm: false });
+
   return (
     <div className="App">
 
@@ -67,6 +71,7 @@ const Home = () => {
 
       <Jumbotron img="img/bg-masthead.jpg"/>
 
+      <SignUpWindow />
     </div>
   );
 }
