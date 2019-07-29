@@ -29,8 +29,20 @@ const SignUpWindow = () => {
                 headers: {"Content-Type": "application/json"}
             }
         )
-        .then(res => res.json())
-        .then(ret => setSignedUp(true))
+        .then(res => {
+            if(res.status == "400") {
+                // Handle the error
+            } else {
+                // Parse json data 
+                res.json();
+
+                // Show success message
+                setSignedUp(true)
+            }
+        }) 
+        .catch(err => {
+            console.log('err', err);
+        })
     }
     const closeSignUp = () => {
         setState({ signUpForm: false })
