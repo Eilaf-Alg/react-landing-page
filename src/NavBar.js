@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import SignUpButton from './SignUpButton';
 import { Link } from 'react-router-dom'; 
 
 const NavBar = () => {
@@ -9,7 +9,7 @@ const NavBar = () => {
           <Link className="logo" to="/"><h2>Logo</h2></Link>
           <Link className="link" to="/">Home</Link>
           <Link className="link" to="/about">About</Link>
-          <Button className="link">Sign up</Button>
+          <SignUpButton>Sign Up</SignUpButton>
         </div>
       </div>
     )

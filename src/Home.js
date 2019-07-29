@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext } from 'react';
 import Jumbotron from './Jumbotron';
 import NavBar from './NavBar';
 import JigSaw from './JigSaw';
@@ -6,7 +6,7 @@ import SignUpWindow from './SignUpWindow'
 import { InfoGroup, Info } from './InfoGroup'
 import { Avatar } from './AvatarGroup'  
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
 const Home = () => {
 
@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
 
-    <AppContext.Provider>
+    <AppContext.Provider value={[state, setState]}>
       <div className="Home">
         <NavBar />
         <Jumbotron img="img/bg-masthead.jpg"/>
