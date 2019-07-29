@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react';
 import Jumbotron from './Jumbotron';
 import NavBar from './NavBar';
 import JigSaw from './JigSaw';
-import SignUpWindow from './SignUpWindow'
+import RegisterLogin from './RegisterLogin'
 import { InfoGroup, Info } from './InfoGroup'
 import { Avatar } from './AvatarGroup'  
 
@@ -74,7 +74,7 @@ const Home = () => {
 
         <Jumbotron img="img/bg-masthead.jpg"/>
 
-        {state.signUpForm && <SignUpWindow />}
+        {state.signUpForm && <RegisterLogin />}
       </div>
     </ AppContext.Provider>
   );
