@@ -35,14 +35,22 @@ const SignUpWindow = () => {
         .then(res => {
             if(res.status == "400") {
                 // Handle the error
-                setLocalState({ ...localState, errorMessage: true})
+                setLocalState({ 
+                    ...localState, 
+                    successMessage: false,
+                    errorMessage: true
+                })
 
             } else {
                 // Parse json data 
                 res.json();
 
                 // Show success message
-                setLocalState({ ...localState, successMessage: true})
+                setLocalState({ 
+                    ...localState, 
+                    successMessage: true,
+                    errorMessage: false
+                })
             }
         }) 
         .catch(err => {
@@ -59,7 +67,7 @@ const SignUpWindow = () => {
             <input ref={comp=> name = comp} type="text" className="form-control"/>
 
             <label>Password</label>
-            <input ref={comp=> password = comp} type="text" className="form-control" />
+            <input ref={comp=> password = comp} type="password" className="form-control" />
 
             <label>Email</label>
             <input ref={comp=> email = comp} type="text" className="form-control" />
@@ -73,7 +81,14 @@ const SignUpWindow = () => {
             {
                 localState.successMessage && 
                 <div className="alert alert-success">
-                    Congratulation! You've been successfully signed up.
+                    Congratulations! You've been successfully signed up.
+                </div>
+            }
+
+            {
+                localState.errorMessage && 
+                <div className="alert alert-danger">
+                    Sorry! You have FAILED!
                 </div>
             }
         </div>
