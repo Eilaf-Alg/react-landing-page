@@ -8,7 +8,10 @@ const SignUpWindow = () => {
     let password;
     let gender;
 
-    const [signedUp, setSignedUp] = useState(false)
+    const [localState, setLocalState] = useState({
+        successMessage: false,
+        errorMessage: false
+    })
     const [state, setState] = useContext(AppContext);
 
     const registerUser = () => {
@@ -32,12 +35,14 @@ const SignUpWindow = () => {
         .then(res => {
             if(res.status == "400") {
                 // Handle the error
+                setLocalState({ ...localState, errorMessage: true})
+
             } else {
                 // Parse json data 
                 res.json();
 
                 // Show success message
-                setSignedUp(true)
+                setLocalState({ ...localState, successMessage: true})
             }
         }) 
         .catch(err => {
@@ -66,7 +71,7 @@ const SignUpWindow = () => {
             <button onClick={closeSignUp} className="btn btn-danger">Cancel</button>
 
             {
-                signedUp && 
+                localState.successMessage && 
                 <div className="alert alert-success">
                     Congratulation! You've been successfully signed up.
                 </div>
