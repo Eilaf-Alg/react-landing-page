@@ -33,7 +33,7 @@ const SignUpWindow = () => {
             }
         )
         .then(res => {
-            if(res.status == "400") {
+            if(res.status === "400") {
                 // Handle the error
                 setLocalState({ 
                     ...localState, 
