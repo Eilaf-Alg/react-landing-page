@@ -6,15 +6,11 @@ import RegisterLogin from './RegisterLogin'
 import { InfoGroup, Info } from './InfoGroup'
 import { Avatar } from './AvatarGroup'  
 
-export const AppContext = createContext();
 
 const Home = () => {
 
-  const [state, setState] = useState({ signUpForm: false });
-
   return (
 
-    <AppContext.Provider value={[state, setState]}>
       <div className="Home">
         <NavBar />
         <Jumbotron img="img/bg-masthead.jpg"/>
@@ -74,9 +70,8 @@ const Home = () => {
 
         <Jumbotron img="img/bg-masthead.jpg"/>
 
-        {state.signUpForm && <RegisterLogin />}
+        
       </div>
-    </ AppContext.Provider>
   );
 }
 
